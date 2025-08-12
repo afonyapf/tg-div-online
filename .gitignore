@@ -1,0 +1,19 @@
+# Логи
+*.log
+bot_general.log
+bot_applicants.log
+
+# Виртуальное окружение
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Переменные окружения
+.env
+.env.local
