@@ -8,10 +8,13 @@ from datetime import datetime
 import re
 
 # ==== НАСТРОЙКИ ====
-API_TOKEN = os.getenv('AAEPvmY7mz2TrRFMd8t59_WKVZLeq3wo7f8')
+import os
+# Читаем переменную окружения TELEGRAM_BOT_TOKEN
+API_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 if not API_TOKEN:
     raise ValueError('TELEGRAM_BOT_TOKEN environment variable is required')
 
+# Читаем переменную окружения ADMIN_CHAT_ID
 ADMIN_CHAT = os.getenv('ADMIN_CHAT_ID')
 if not ADMIN_CHAT:
     raise ValueError('ADMIN_CHAT_ID environment variable is required')
