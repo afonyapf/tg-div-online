@@ -3,11 +3,10 @@ version: '3.8'
 services:
   telegram-bot:
     build: .
-    environment:
-      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-      - ADMIN_CHAT_ID=${ADMIN_CHAT_ID}
+    env_file:
+      - .env   # так docker-compose подтянет твои токены
     volumes:
-      - ./logs:/app
+      - ./logs:/app/logs  # только логи, чтобы не затереть код
     restart: unless-stopped
     ports:
       - "8000:8000"
