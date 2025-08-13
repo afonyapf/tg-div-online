@@ -7,5 +7,7 @@ services:
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - ADMIN_CHAT_ID=${ADMIN_CHAT_ID}
     volumes:
-      - ./logs:/app/logs
+      - ./logs:/app
     restart: unless-stopped
+    ports:
+      - "8000:8000"
